@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Аружан Қыз Ұзату</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=Caveat&family=Comforter&family=Dancing+Script&family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="loading-block">
+    </div>
+    <div id="site-content" style="display: none;">
+        <header>
+            <div class="mini-logo">Sh & A</div>
+            <audio id="myAudio" style="display: none;">
+                <source src="/img/qyz-uzatu.mp3" type="audio/mpeg">
+            </audio>
+
+            <div class="sound-box">
+                <i id="playIcon" class="fa-solid fa-play fa-beat" onclick="toggleSound()"></i>
+            </div>
+        </header>
+        <div class="content">
+            <div class="first-section">
+                <div class="wed-names">
+                    Аружан
+                </div>
+                <div class="title">
+                    Қыз ұзату
+                </div>
+
+                <div class="timer">
+                    <div class="days">
+                        <p id="days"></p>
+                        <span class="sub-timer">күн</span>
+                    </div>
+                    <div class="hours">
+                        <p id="hours"></p>
+                        <span class="sub-timer">сағат</span>
+                    </div>
+                    <div class="minutes">
+                        <p id="minutes"></p>
+                        <span class="sub-timer">минут</span>
+                    </div>
+                </div>
+            </div>
+            <div class="second-section">
+                <div class="title">
+                    Құрметті қонақтар!
+                </div>
+                <div class="text">Құрметті ағайын-туыс, құда-жекжат!
+                    Сіздерді аяулы қызымыз Аружанның ұзату тойының қадірлі қонағы болуға шақырамыз
+                </div>
+                <div class="text"><b>Той күні</b></div>
+                <div class="title" style="font-weight: 100; color: rgb(231,178,184);">4 тамыз, 2023 жыл</div>
+                <div class="title" style="font-weight: 100; color: rgb(231,178,184);">сағат 12:00</div>
+                <div class="calendar">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>Пт</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody id="calendar-body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text"><b>Өткізілу Орны</b></div>
+                <div class="text">
+                    Урунтаев көшесі, 37 </br>
+                    Ульбинский м-н, Өскемен қаласы
+                </div>
+                <div class="google-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10283.108941313008!2d82.62617822908702!3d49.88420981979909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42eb4eb9dce57e75%3A0x57dba65dd7e258b4!2z0L_QvtGBLiDQo9C70YzQsdC40L3RgdC60LjQuSwg0KPRgdGC0Ywt0JrQsNC80LXQvdC-0LPQvtGA0YHQuiAwNzAwMDA!5e0!3m2!1sru!2skz!4v1686898622604!5m2!1sru!2skz" width="900" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="third-section">
+                <img id="rotating-image" src="/img/image-removebg-preview.png" alt="Rotating Image">
+<!--{#                <form action="{% url 'index' %}" method="POST">#}-->
+<!--{#                    {% csrf_token %}#}-->
+<!--{#                    <span class="text" style="margin-bottom: 45px">Тойға қатысуыңызды растауыңызды сұраймыз!</span>#}-->
+<!--{#                    <input id="name" class="input-auth" type="text" name="name" placeholder="Аты-жөнініз" required>#}-->
+<!--{#                    <input id="email" class="input-auth" type="email" name="email" placeholder="Электрондық почта" required>#}-->
+<!--{#                    <span class="text">Жұбайыңыздың аты-жөні? (егер болса)</span>#}-->
+<!--{#                    <input id="lname" class="input-auth" type="text" name="lname" placeholder="Аты-жөні">#}-->
+<!--{##}-->
+<!--{#                    <div class="question">#}-->
+<!--{#                        <div class="radio-group">#}-->
+<!--{#                            <span class="text">Тойға келесіз бе?</span>#}-->
+<!--{#                            <input type="radio" name="isCome" id="isCome">#}-->
+<!--{#                            <label class="radio-label" for="isCome">Иә, әрине</label>#}-->
+<!--{#                            <input type="radio" name="isCome" id="isNotCome">#}-->
+<!--{#                            <label class="radio-label" for="isNotCome">Өкінішке орай келе алмаймын</label>#}-->
+<!--{#                        </div>#}-->
+<!--{#                    </div>#}-->
+<!--{#                    <button type="submit">Жіберу</button>#}-->
+<!--{##}-->
+<!--{#                </form>#}-->
+            </div>
+        </div>
+        <footer>
+            <h1>Той иелері</h1>
+            <h1>Аяжан - Бакытгул</h1>
+            <div class="line">
+                <h2>Сізді қыз-ұзату тойымызда күтеміз!</h2>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    var audio = document.getElementById("myAudio");
+    var playIcon = document.getElementById("playIcon");
+
+    function toggleSound() {
+        if (audio.paused) {
+            audio.play();
+            playIcon.classList.remove("fa-play");
+            playIcon.classList.add("fa-pause");
+        } else {
+            audio.pause();
+            playIcon.classList.remove("fa-pause");
+            playIcon.classList.add("fa-play");
+        }
+    }
+    // Function to update the timer
+    function updateTimer() {
+        const targetDate = new Date("August 4, 2023 00:00:00");
+
+        // Get the current date and time
+        const currentDate = new Date();
+
+        // Calculate the remaining time in milliseconds
+        const remainingTime = targetDate.getTime() - currentDate.getTime();
+
+        // Calculate the remaining days
+        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+
+        // Update the timer element
+        document.getElementById('days').textContent = `${days}`;
+        document.getElementById('hours').textContent = `${hours}`;
+        document.getElementById('minutes').textContent = `${minutes}`;
+    }
+
+    // Call the updateTimer function initially
+    updateTimer();
+
+    // Update the timer every second
+    setInterval(updateTimer, 1000);
+
+    function createCalendar() {
+        const calendarBody = document.getElementById('calendar-body');
+        const date = new Date(2023, 7, 1); // August is represented as 7 (zero-based index)
+
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const firstDay = new Date(year, month, 0).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        let dayCount = 1;
+        let html = '';
+
+        // Fill the calendar grid with dates
+        for (let i = 0; i < 6; i++) {
+            html += '<tr>';
+            for (let j = 0; j < 7; j++) {
+                if ((i === 0 && j < firstDay) || dayCount > daysInMonth) {
+                    html += '<td></td>';
+                } else {
+                    if (year === 2023 && month === 7 && dayCount === 4) {
+                        html += '<td class="highlight">' + dayCount + '</td>';
+                    } else {
+                        html += '<td>' + dayCount + '</td>';
+                    }
+                    dayCount++;
+                }
+            }
+            html += '</tr>';
+        }
+
+        calendarBody.innerHTML = html;
+    }
+
+    // Create the calendar
+    createCalendar();
+
+    function rotateImage() {
+        const rotatingImage = document.getElementById('rotating-image');
+        let rotation = 0;
+
+        setInterval(() => {
+            rotation += 1;
+            rotatingImage.style.transform = `rotate(${rotation}deg)`;
+        }, 10); // Adjust the rotation speed as needed
+    }
+
+    // Start rotating the image
+    rotateImage();
+
+
+    // Wait for 2 seconds before showing the site content
+    setTimeout(function() {
+        var loadingBlock = document.getElementById('loading-block');
+        var siteContent = document.getElementById('site-content');
+
+        // Slide up the loading block
+        loadingBlock.style.transform = 'translateX(-100%)';
+
+        // Fade in the site content
+        siteContent.style.display = 'block';
+        setTimeout(function() {
+            siteContent.style.opacity = '1';
+        }, 100);
+
+        audio.play();
+        playIcon.classList.remove("fa-play");
+        playIcon.classList.add("fa-pause");
+    }, 1500);
+
+</script>
+</html>

@@ -1,0 +1,330 @@
+
+body {
+    margin: 0;
+    background: url("../img/bg_whole.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+#loading-block {
+    background: url("../img/Group 1.png") no-repeat fixed;
+    background-size: auto 100%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0%);
+}
+
+#site-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+header {
+    display: flex;
+    z-index: 2;
+    position: fixed;
+    justify-content: space-between;
+    height: 150px;
+    width: 100%;
+    background-color: rgb(254, 223, 227, 0.70);
+}
+
+.mini-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    height: 100%;
+    font-size: 90px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.sound-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    width: 90px;
+    height: 90px;
+    padding-left: 5px;
+    color: rgb(217, 113, 122);
+    background: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 1800px;
+}
+
+footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url("../img/back_footer.JPG") no-repeat;
+    background-size: 100% 700px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 700px;
+    align-items: center;
+}
+
+footer h1 {
+    font-family: 'Marck Script', cursive;
+    font-size: 90px;
+    font-weight: 100;
+    color: white;
+}
+
+footer h2 {
+    font-family: 'Caveat', cursive;
+    font-weight: 200;
+    font-size: 50px;
+    color: white;
+}
+
+.line {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+    height: 3px;
+    background-color: white;
+}
+
+.first-section {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Caveat', cursive;
+    font-weight: 200;
+    font-size: 90px;
+    color: rgb(217, 113, 122);
+}
+
+.wed-names {
+    margin-top: 30px;
+    font-family: 'Caveat', cursive;
+    font-weight: 400;
+    font-size: 150px;
+    color: #d7b684;
+    text-align: center;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+}
+
+.timer p {
+    font-family: "Adwent Pro", cursive;
+    color: rgb(217, 113, 122);
+    font-size: 70px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.sub-timer {
+    font-family: "Caveat", cursive;
+    font-size: 70px;
+    font-weight: 100;
+}
+
+.days {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid rgb(254, 223, 227);
+}
+
+.hours {
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid rgb(254, 223, 227);
+}
+
+.minutes {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid rgb(254, 223, 227);
+}
+
+.text {
+    margin-top: 45px;
+    width: 80%;
+    font-weight: 200;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Caveat", cursive;
+}
+
+.calendar {
+    width: 700px;
+    font-family: 'Adwent Pro', cursive;}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 35px;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+td.highlight {
+    background-color: rgb(254, 223, 227);
+}
+
+.google-map iframe {
+    height: 25vh;
+    width: 90vw;
+    left: 0;
+    top: 0;
+}
+
+.third-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.third-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    min-height: 40vh;
+    background: rgb(254, 223, 227, 0.70);
+    border-radius: 25px;
+}
+
+.third-section form input[type = text], .third-section form input[type = email] {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+.third-section form input::placeholder {
+    padding: 20px 30px;
+    font-size: 35px;
+}
+
+.third-section form label {
+    font-size: 35px;
+}
+
+.question {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.radio-group {
+    margin-top: 10px;
+}
+
+.radio-label {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.radio-label:hover {
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ce515c;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+input[type="radio"]:checked + label:before {
+    background-color: #de8d94;
+}
+
+.third-section form button {
+    width: 80%;
+    height: 80px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 25px;
+    font-size: 35px;
+    background: rgb(199, 124, 129);
+    color: white;
+    padding: 20px 30px;
+}
+
+.third-section form button:hover {
+    background: rgb(196, 107, 113);
+}
+
+
+
+#rotating-image {
+    transition: transform 300ms ease-in-out;
+}
