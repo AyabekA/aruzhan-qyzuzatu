@@ -1,8 +1,13 @@
 
 body {
     margin: 0;
-    background: url("../img/bg_whole.jpg") no-repeat fixed;
+    background: url("../img/bg_whole.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
 #loading-block {
