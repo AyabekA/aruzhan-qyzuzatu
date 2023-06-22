@@ -323,8 +323,12 @@ input[type="radio"]:checked + label:before {
     background: rgb(196, 107, 113);
 }
 
-
-
 #rotating-image {
-    transition: transform 300ms ease-in-out;
+  width: 200px;
+  height: 200px;
+  background-image: url("../img/image_removebg.png");
+  background-size: cover;    
+  transition: transform 300ms ease-in-out;
+
+  /* Additional styling properties */
 }
