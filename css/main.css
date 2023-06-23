@@ -6,9 +6,9 @@ body {
     background-repeat: no-repeat;    
     background-attachment: fixed;
     background-size: auto 100%;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
+    -o-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -webkit-background-size: auto 100%;
 }
 
 #loading-block {
