@@ -34,7 +34,7 @@
                     Қыз ұзату
                 </div>
 
-                <div class="timer">
+<!--                 <div class="timer">
                     <div class="days">
                         <p id="days"></p>
                         <span class="sub-timer">күн</span>
@@ -47,7 +47,7 @@
                         <p id="minutes"></p>
                         <span class="sub-timer">минут</span>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="second-section">
                 <div class="title">
@@ -136,32 +136,32 @@
             playIcon.classList.add("fa-play");
         }
     }
-    // Function to update the timer
-    function updateTimer() {
-        const targetDate = new Date("August 4, 2023 00:00:00");
+    // // Function to update the timer
+    // function updateTimer() {
+    //     const targetDate = new Date("August 4, 2023 00:00:00");
 
-        // Get the current date and time
-        const currentDate = new Date();
+    //     // Get the current date and time
+    //     const currentDate = new Date();
 
-        // Calculate the remaining time in milliseconds
-        const remainingTime = targetDate.getTime() - currentDate.getTime();
+    //     // Calculate the remaining time in milliseconds
+    //     const remainingTime = targetDate.getTime() - currentDate.getTime();
 
-        // Calculate the remaining days
-        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    //     // Calculate the remaining days
+    //     const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    //     const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //     const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
 
-        // Update the timer element
-        document.getElementById('days').textContent = `${days}`;
-        document.getElementById('hours').textContent = `${hours}`;
-        document.getElementById('minutes').textContent = `${minutes}`;
-    }
+    //     // Update the timer element
+    //     document.getElementById('days').textContent = `${days}`;
+    //     document.getElementById('hours').textContent = `${hours}`;
+    //     document.getElementById('minutes').textContent = `${minutes}`;
+    // }
 
-    // Call the updateTimer function initially
-    updateTimer();
+    // // Call the updateTimer function initially
+    // updateTimer();
 
-    // Update the timer every second
-    setInterval(updateTimer, 1000);
+    // // Update the timer every second
+    // setInterval(updateTimer, 1000);
 
     function createCalendar() {
         const calendarBody = document.getElementById('calendar-body');
